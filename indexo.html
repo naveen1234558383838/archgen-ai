@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArchGen AI - Transform your architectural ideas into stunning visualizations using advanced AI technology">
+    <title>ArchGen AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation/Header -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <svg class="logo-svg" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                    <g class="logo-buildings">
+                        <rect x="50" y="20" width="20" height="80"/>
+                        <rect x="80" y="40" width="20" height="60"/>
+                        <rect x="110" y="30" width="20" height="70"/>
+                        <rect x="140" y="50" width="20" height="50"/>
+                        <rect x="170" y="60" width="20" height="40"/>
+                        <rect x="200" y="70" width="20" height="30"/>
+                    </g>
+                    <text x="50" y="120" class="logo-text-main">ARCHGEN AI</text>
+                    <text x="50" y="135" class="logo-text-sub">AI IMAGE GENERATOR</text>
+                </svg>
+                <span class="logo-text">ArchGen AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link about-link">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn history-btn">📜 History</button>
+                <button class="nav-btn back-btn">← Back</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container">
+        <div class="header">
+            <h1>ARCHGEN AI ⚡</h1>
+            <p class="tagline">Level up your architectural game with AI magic ✨🏛️</p>
+            <p class="crafted-by">Powered by <span class="buildnova">BuildNova AI</span> 🚀</p>
+        </div>
+        
+        <div class="generator-box">
+            <textarea 
+                placeholder="Drop your wildest architectural dreams here... 🌈 (e.g. 'cyberpunk treehouse with holo-gardens and anti-gravity pools' 🤯)"
+                class="prompt-input"
+            ></textarea>
+            
+            <button class="generate-btn">
+                <span>🎨 Create Some Magic 🪄</span>
+            </button>
+
+            <div class="model-selection">
+                <h3>Vibe Check 💫</h3>
+                <div class="model-buttons">
+                    <button class="model-btn">Basic 😌</button>
+                    <button class="model-btn active">HD ✨</button>
+                    <button class="model-btn">Ultra 🔥</button>
+                </div>
+            </div>
+
+            <div class="preference-section">
+                <h3>Pick Your Style 🎯</h3>
+                <div class="preference-buttons">
+                    <button class="pref-btn active">Speedy ⚡</button>
+                    <button class="pref-btn">Extra AF ✨</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>✨ Creating your masterpiece... ✨</p>
+        </div>
+
+        <div class="results" id="results">
+            <!-- Generated images will appear here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with 🔥 by ArchGen AI</p>
+        <p class="disclaimer">Powered by next-gen AI tech ⚡</p>
+    </footer>
+
+    <!-- Add this before the footer -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Generation History</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="historyList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

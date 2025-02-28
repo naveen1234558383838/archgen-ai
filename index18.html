@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArchGen AI - Transform your architectural ideas into stunning visualizations using advanced AI technology">
+    <title>AI Architecture Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- AI pattern background -->
+    <div class="ai-pattern"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1>Create an architectural design from text prompt</h1>
+        
+        <div class="generator-box">
+            <textarea 
+                placeholder="Enter your architectural prompt or just click generate to get inspired"
+                class="prompt-input"
+            ></textarea>
+            
+            <button class="generate-btn">Generate</button>
+
+            <div class="model-selection">
+                <h3>Choose a model</h3>
+                <div class="model-buttons">
+                    <button class="model-btn">Standard</button>
+                    <button class="model-btn active">HD</button>
+                    <button class="model-btn">Genius</button>
+                </div>
+            </div>
+
+            <div class="preference-section">
+                <h3>Preference</h3>
+                <div class="preference-buttons">
+                    <button class="pref-btn active">Speed</button>
+                    <button class="pref-btn">Quality</button>
+                </div>
+                <div class="model-toggle">
+                    <input type="checkbox" id="oldeModel">
+                    <label for="oldeModel">Use Olde Model</label>
+                </div>
+            </div>
+
+            <div class="style-section">
+                <h3>Choose a style</h3>
+                <div class="style-grid">
+                    <div class="style-item active">
+                        <span class="random-icon">?</span>
+                    </div>
+                    <!-- Add more style items as needed -->
+                </div>
+                <button class="view-all-btn">View all +100 styles</button>
+            </div>
+
+            <div class="shape-section">
+                <h3>Choose Shape</h3>
+                <select class="shape-select">
+                    <option value="square">Square</option>
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="preview-area">
+            <!-- Preview will be shown here -->
+        </div>
+    </div>
+
+    <!-- History modal -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Generation History</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="historyList">
+                    <!-- History items will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Crafted with 🏛️ by ArchGen AI</p>
+        <p class="disclaimer">Powered by advanced architectural visualization AI</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 

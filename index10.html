@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ AI Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- AI pattern background -->
+    <div class="ai-pattern"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1>✨ AI Image Generator</h1>
+        
+        <!-- Input section -->
+        <div class="input-section">
+            <textarea 
+                id="prompt" 
+                placeholder="Describe what you want to see... (e.g. 'a magical forest with floating lanterns, digital art')"
+            ></textarea>
+            <button id="generate">Generate Magic ✨</button>
+        </div>
+        
+        <!-- Image count selector -->
+        <div class="quality-selector">
+            <label>Number of Images:</label>
+            <select id="imageCount">
+                <option value="1">1 Image</option>
+                <option value="2">2 Images</option>
+                <option value="4" selected>4 Images</option>
+            </select>
+        </div>
+
+        <!-- History and restart buttons -->
+        <div class="history-section">
+            <button id="showHistory" class="secondary-btn">📜 View History</button>
+            <button id="restart" class="secondary-btn">🔄 Start Over</button>
+        </div>
+
+        <!-- Loading indicator -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Creating your masterpiece... 🎨</p>
+        </div>
+
+        <!-- Results grid -->
+        <div class="results" id="results">
+            <!-- Generated images will be displayed here -->
+        </div>
+    </div>
+
+    <!-- History modal -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Generation History</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="historyList">
+                    <!-- History items will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with 💖 by AI Enthusiasts</p>
+        <p class="disclaimer">Images are generated using AI technology</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 
